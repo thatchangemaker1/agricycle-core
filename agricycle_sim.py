@@ -1,249 +1,187 @@
-{
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/thatchangemaker1/agricycle-core/blob/main/agricycle_sim_py.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "code",
-      "execution_count": 1,
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 436
-        },
-        "id": "mBL0NE_hFbL-",
-        "outputId": "f3a4a85d-91c1-4fdc-ea61-5c3021aa873f"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "\n",
-            "==============================\n",
-            "      DIALING *384#...        \n",
-            "==============================\n"
-          ]
-        },
-        {
-          "output_type": "error",
-          "ename": "KeyboardInterrupt",
-          "evalue": "Interrupted by user",
-          "traceback": [
-            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
-            "\u001b[0;32m/tmp/ipykernel_2459/2350600100.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m    176\u001b[0m \u001b[0;31m# --- PROGRAM ENTRY POINT ---\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    177\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0m__name__\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"__main__\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 178\u001b[0;31m     \u001b[0mverify_farm_id\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-            "\u001b[0;32m/tmp/ipykernel_2459/2350600100.py\u001b[0m in \u001b[0;36mverify_farm_id\u001b[0;34m()\u001b[0m\n\u001b[1;32m     69\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"      DIALING *384#...        \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     70\u001b[0m     \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"==============================\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 71\u001b[0;31m     \u001b[0mfarm_id\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Enter your AgriCycle Farm ID (e.g., AGR-101): \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstrip\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     72\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     73\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mfarm_id\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mregistered_farms\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;32m/usr/local/lib/python3.13/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;32m/usr/local/lib/python3.13/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
-          ]
-        }
-      ],
-      "source": [
-        "# ==========================================\n",
-        "# AGRICYCLE USSD + SMS INTEGRATED SIMULATION\n",
-        "# ==========================================\n",
-        "\n",
-        "import time\n",
-        "\n",
-        "# --- 1. CONFIGURATION & SCIENTIFIC CONSTANTS ---\n",
-        "CARBON_FACTORS = {\n",
-        "    \"1\": 0.65,  # Maize Stalks & Cobs\n",
-        "    \"2\": 0.50,  # Maize Cobs Only\n",
-        "    \"3\": 0.40   # Groundnut Shells / Other Residues\n",
-        "}\n",
-        "\n",
-        "# Simulated database of registered farms (storing profiles and phone numbers)\n",
-        "registered_farms = {\n",
-        "    \"AGR-101\": {\"name\": \"Bwalya Chanda\", \"location\": \"Chongwe\", \"phone\": \"+260970000001\"},\n",
-        "    \"AGR-102\": {\"name\": \"Grace Mutale\", \"location\": \"Mazabuka\", \"phone\": \"+260960000002\"}\n",
-        "}\n",
-        "\n",
-        "# Simulated ledger for tracking all biomass and carbon transactions\n",
-        "biomass_ledger = []\n",
-        "\n",
-        "\n",
-        "# --- 2. SMS GATEWAY SIMULATION FUNCTION ---\n",
-        "def send_sms(phone_number, message_body):\n",
-        "    \"\"\"\n",
-        "    Simulates sending an outbound SMS text message to the farmer's mobile phone.\n",
-        "    In production, this would interface with an API gateway like Africa's Talking or Twilio.\n",
-        "    \"\"\"\n",
-        "    print(\"\\n--------------------------------------------------\")\n",
-        "    print(f\" [SMS GATEWAY SIMULATION] Outbound to: {phone_number}\")\n",
-        "    print(f\" MESSAGE: {message_body}\")\n",
-        "    print(\"--------------------------------------------------\")\n",
-        "    time.sleep(1) # Simulate real-world network transmission delay\n",
-        "\n",
-        "\n",
-        "# --- 3. REGISTRATION & FALLBACK LOGIC ---\n",
-        "\n",
-        "def register_new_farm():\n",
-        "    print(\"\\n--- New Farm Quick Registration ---\")\n",
-        "    new_name = input(\"Enter Full Name: \").strip()\n",
-        "    new_location = input(\"Enter District/Location: \").strip()\n",
-        "    phone_number = input(\"Enter Mobile Number (e.g., +260...): \").strip()\n",
-        "\n",
-        "    # Generate a dynamic ID\n",
-        "    new_id = f\"AGR-10{len(registered_farms) + 1}\"\n",
-        "\n",
-        "    registered_farms[new_id] = {\n",
-        "        \"name\": new_name,\n",
-        "        \"location\": new_location,\n",
-        "        \"phone\": phone_number\n",
-        "    }\n",
-        "\n",
-        "    print(f\"\\n[USSD] Success! Farm registered for {new_name}.\")\n",
-        "\n",
-        "    # TRIGGER SMS CONFIRMATION\n",
-        "    sms_text = (\n",
-        "        f\"Hello {new_name}, welcome to AgriCycle! \"\n",
-        "        f\"Your registration is confirmed. Your Farm ID is {new_id}. \"\n",
-        "        f\"Keep this ID safe to log your agricultural biomass and track carbon credits.\"\n",
-        "    )\n",
-        "    send_sms(phone_number, sms_text)\n",
-        "\n",
-        "    run_ussd_session(new_id)\n",
-        "\n",
-        "\n",
-        "def verify_farm_id():\n",
-        "    print(\"\\n==============================\")\n",
-        "    print(\"      DIALING *384#...        \")\n",
-        "    print(\"==============================\")\n",
-        "    farm_id = input(\"Enter your AgriCycle Farm ID (e.g., AGR-101): \").strip()\n",
-        "\n",
-        "    if farm_id in registered_farms:\n",
-        "        farmer = registered_farms[farm_id]\n",
-        "        print(f\"\\n[USSD] Welcome back, {farmer['name']} ({farmer['location']})!\")\n",
-        "        run_ussd_session(farm_id)\n",
-        "    else:\n",
-        "        print(\"\\n[USSD] Error: Farm ID not recognized.\")\n",
-        "        print(\"1. Register new farm profile\")\n",
-        "        print(\"2. Re-enter Farm ID\")\n",
-        "        choice = input(\"Select an option (1-2): \").strip()\n",
-        "\n",
-        "        if choice == \"1\":\n",
-        "            register_new_farm()\n",
-        "        elif choice == \"2\":\n",
-        "            verify_farm_id()\n",
-        "        else:\n",
-        "            print(\"\\n[USSD] Invalid selection. Session ended.\")\n",
-        "\n",
-        "\n",
-        "# --- 4. PRODUCE SELECTION, LOGGING & RECEIPT SMS ---\n",
-        "\n",
-        "def run_ussd_session(farm_id):\n",
-        "    farmer = registered_farms[farm_id]\n",
-        "\n",
-        "    while True:\n",
-        "        print(\"\\n--- AgriCycle USSD Main Menu ---\")\n",
-        "        print(\"1. Log Organic Waste / Biomass\")\n",
-        "        print(\"2. Check Carbon Credit Balance\")\n",
-        "        print(\"3. Exit Session\")\n",
-        "\n",
-        "        choice = input(\"Choose an option (1-3): \").strip()\n",
-        "\n",
-        "        if choice == \"1\":\n",
-        "            print(\"\\n--- Select Produce / Residue Type ---\")\n",
-        "            print(\"1. Maize Stalks & Cobs\")\n",
-        "            print(\"2. Maize Cobs Only\")\n",
-        "            print(\"3. Other Agricultural Residues (e.g., Groundnut Shells)\")\n",
-        "\n",
-        "            produce_choice = input(\"Select residue type (1-3): \").strip()\n",
-        "\n",
-        "            if produce_choice not in CARBON_FACTORS:\n",
-        "                print(\"[USSD] Invalid produce selection. Returning to main menu.\")\n",
-        "                continue\n",
-        "\n",
-        "            try:\n",
-        "                weight_kg = float(input(\"Enter weight of biomass diverted (in kg): \"))\n",
-        "                if weight_kg <= 0:\n",
-        "                    print(\"Weight must be greater than zero.\")\n",
-        "                    continue\n",
-        "\n",
-        "                # Apply the specific multiplier based on the produce chosen\n",
-        "                factor = CARBON_FACTORS[produce_choice]\n",
-        "                co2_offset = weight_kg * factor\n",
-        "\n",
-        "                # Determine produce name for the transaction log and SMS\n",
-        "                produce_names = {\n",
-        "                    \"1\": \"Maize Stalks & Cobs\",\n",
-        "                    \"2\": \"Maize Cobs Only\",\n",
-        "                    \"3\": \"Other Agricultural Residues\"\n",
-        "                }\n",
-        "                selected_produce_name = produce_names[produce_choice]\n",
-        "\n",
-        "                # Record transaction\n",
-        "                transaction = {\n",
-        "                    \"farm_id\": farm_id,\n",
-        "                    \"produce\": selected_produce_name,\n",
-        "                    \"weight\": weight_kg,\n",
-        "                    \"co2_offset\": co2_offset\n",
-        "                }\n",
-        "                biomass_ledger.append(transaction)\n",
-        "\n",
-        "                print(f\"\\n[USSD] Success! Logged {weight_kg}kg of {selected_produce_name}.\")\n",
-        "                print(f\"[USSD] Estimated Carbon Offset: {co2_offset:.2f} kg CO2e.\")\n",
-        "\n",
-        "                # TRIGGER TRANSACTION RECEIPT SMS\n",
-        "                receipt_text = (\n",
-        "                    f\"AgriCycle Update: Logged {weight_kg}kg of {selected_produce_name}. \"\n",
-        "                    f\"Estimated Carbon Credit Earned: {co2_offset:.2f} kg CO2e. \"\n",
-        "                    f\"Thank you for building a circular economy!\"\n",
-        "                )\n",
-        "                send_sms(farmer[\"phone\"], receipt_text)\n",
-        "\n",
-        "            except ValueError:\n",
-        "                print(\"[USSD] Invalid input. Please enter a valid numerical value.\")\n",
-        "\n",
-        "        elif choice == \"2\":\n",
-        "            # Filter ledger entries for this specific farm\n",
-        "            farm_transactions = [t for t in biomass_ledger if t[\"farm_id\"] == farm_id]\n",
-        "            farm_total_weight = sum(t[\"weight\"] for t in farm_transactions)\n",
-        "            farm_total_co2 = sum(t[\"co2_offset\"] for t in farm_transactions)\n",
-        "\n",
-        "            print(f\"\\n--- Account Summary for {farm_id} ---\")\n",
-        "            print(f\"Total Biomass Diverted: {farm_total_weight} kg\")\n",
-        "            print(f\"Total Verified Carbon Offset: {farm_total_co2:.2f} kg CO2e\")\n",
-        "            print(f\"Total Transactions Logged: {len(farm_transactions)}\")\n",
-        "            print(\"Status: Pending institutional audit & verification.\")\n",
-        "\n",
-        "        elif choice == \"3\":\n",
-        "            print(f\"\\n[USSD] Thank you, {farmer['name']}. Session closed.\")\n",
-        "            break\n",
-        "        else:\n",
-        "            print(\"[USSD] Invalid choice. Please try again.\")\n",
-        "\n",
-        "\n",
-        "# --- PROGRAM ENTRY POINT ---\n",
-        "if __name__ == \"__main__\":\n",
-        "    verify_farm_id()"
-      ]
-    }
-  ],
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "toc_visible": true,
-      "authorship_tag": "ABX9TyMqJt5dVJ1fysccHJ7UT92v",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "display_name": "Python 3",
-      "name": "python3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "nbformat": 4,
-  "nbformat_minor": 0
+# -*- coding: utf-8 -*-
+"""agricycle_sim
+
+Automatically generated by Colab.
+
+Original file is located at
+    https://colab.research.google.com/drive/1yr5e6GXVc37XWEyQy_kNX7YbmfzhmwO_
+"""
+
+# ==========================================
+# AGRICYCLE USSD + SMS INTEGRATED SIMULATION
+# ==========================================
+
+import time
+
+# --- 1. CONFIGURATION & SCIENTIFIC CONSTANTS ---
+CARBON_FACTORS = {
+    "1": 0.65,  # Maize Stalks & Cobs
+    "2": 0.50,  # Maize Cobs Only
+    "3": 0.40   # Groundnut Shells / Other Residues
 }
+
+# Simulated database of registered farms (storing profiles and phone numbers)
+registered_farms = {
+    "AGR-101": {"name": "Bwalya Chanda", "location": "Chongwe", "phone": "+260970000001"},
+    "AGR-102": {"name": "Grace Mutale", "location": "Mazabuka", "phone": "+260960000002"}
+}
+
+# Simulated ledger for tracking all biomass and carbon transactions
+biomass_ledger = []
+
+
+# --- 2. SMS GATEWAY SIMULATION FUNCTION ---
+def send_sms(phone_number, message_body):
+    """
+    Simulates sending an outbound SMS text message to the farmer's mobile phone.
+    In production, this would interface with an API gateway like Africa's Talking or Twilio.
+    """
+    print("\n--------------------------------------------------")
+    print(f" [SMS GATEWAY SIMULATION] Outbound to: {phone_number}")
+    print(f" MESSAGE: {message_body}")
+    print("--------------------------------------------------")
+    time.sleep(1) # Simulate real-world network transmission delay
+
+
+# --- 3. REGISTRATION & FALLBACK LOGIC ---
+
+def register_new_farm():
+    print("\n--- New Farm Quick Registration ---")
+    new_name = input("Enter Full Name: ").strip()
+    new_location = input("Enter District/Location: ").strip()
+    phone_number = input("Enter Mobile Number (e.g., +260...): ").strip()
+
+    # Generate a dynamic ID
+    new_id = f"AGR-10{len(registered_farms) + 1}"
+
+    registered_farms[new_id] = {
+        "name": new_name,
+        "location": new_location,
+        "phone": phone_number
+    }
+
+    print(f"\n[USSD] Success! Farm registered for {new_name}.")
+
+    # TRIGGER SMS CONFIRMATION
+    sms_text = (
+        f"Hello {new_name}, welcome to AgriCycle! "
+        f"Your registration is confirmed. Your Farm ID is {new_id}. "
+        f"Keep this ID safe to log your agricultural biomass and track carbon credits."
+    )
+    send_sms(phone_number, sms_text)
+
+    run_ussd_session(new_id)
+
+
+def verify_farm_id():
+    print("\n==============================")
+    print("      DIALING *384#...        ")
+    print("==============================")
+    farm_id = input("Enter your AgriCycle Farm ID (e.g., AGR-101): ").strip()
+
+    if farm_id in registered_farms:
+        farmer = registered_farms[farm_id]
+        print(f"\n[USSD] Welcome back, {farmer['name']} ({farmer['location']})!")
+        run_ussd_session(farm_id)
+    else:
+        print("\n[USSD] Error: Farm ID not recognized.")
+        print("1. Register new farm profile")
+        print("2. Re-enter Farm ID")
+        choice = input("Select an option (1-2): ").strip()
+
+        if choice == "1":
+            register_new_farm()
+        elif choice == "2":
+            verify_farm_id()
+        else:
+            print("\n[USSD] Invalid selection. Session ended.")
+
+
+# --- 4. PRODUCE SELECTION, LOGGING & RECEIPT SMS ---
+
+def run_ussd_session(farm_id):
+    farmer = registered_farms[farm_id]
+
+    while True:
+        print("\n--- AgriCycle USSD Main Menu ---")
+        print("1. Log Organic Waste / Biomass")
+        print("2. Check Carbon Credit Balance")
+        print("3. Exit Session")
+
+        choice = input("Choose an option (1-3): ").strip()
+
+        if choice == "1":
+            print("\n--- Select Produce / Residue Type ---")
+            print("1. Maize Stalks & Cobs")
+            print("2. Maize Cobs Only")
+            print("3. Other Agricultural Residues (e.g., Groundnut Shells)")
+
+            produce_choice = input("Select residue type (1-3): ").strip()
+
+            if produce_choice not in CARBON_FACTORS:
+                print("[USSD] Invalid produce selection. Returning to main menu.")
+                continue
+
+            try:
+                weight_kg = float(input("Enter weight of biomass diverted (in kg): "))
+                if weight_kg <= 0:
+                    print("Weight must be greater than zero.")
+                    continue
+
+                # Apply the specific multiplier based on the produce chosen
+                factor = CARBON_FACTORS[produce_choice]
+                co2_offset = weight_kg * factor
+
+                # Determine produce name for the transaction log and SMS
+                produce_names = {
+                    "1": "Maize Stalks & Cobs",
+                    "2": "Maize Cobs Only",
+                    "3": "Other Agricultural Residues"
+                }
+                selected_produce_name = produce_names[produce_choice]
+
+                # Record transaction
+                transaction = {
+                    "farm_id": farm_id,
+                    "produce": selected_produce_name,
+                    "weight": weight_kg,
+                    "co2_offset": co2_offset
+                }
+                biomass_ledger.append(transaction)
+
+                print(f"\n[USSD] Success! Logged {weight_kg}kg of {selected_produce_name}.")
+                print(f"[USSD] Estimated Carbon Offset: {co2_offset:.2f} kg CO2e.")
+
+                # TRIGGER TRANSACTION RECEIPT SMS
+                receipt_text = (
+                    f"AgriCycle Update: Logged {weight_kg}kg of {selected_produce_name}. "
+                    f"Estimated Carbon Credit Earned: {co2_offset:.2f} kg CO2e. "
+                    f"Thank you for building a circular economy!"
+                )
+                send_sms(farmer["phone"], receipt_text)
+
+            except ValueError:
+                print("[USSD] Invalid input. Please enter a valid numerical value.")
+
+        elif choice == "2":
+            # Filter ledger entries for this specific farm
+            farm_transactions = [t for t in biomass_ledger if t["farm_id"] == farm_id]
+            farm_total_weight = sum(t["weight"] for t in farm_transactions)
+            farm_total_co2 = sum(t["co2_offset"] for t in farm_transactions)
+
+            print(f"\n--- Account Summary for {farm_id} ---")
+            print(f"Total Biomass Diverted: {farm_total_weight} kg")
+            print(f"Total Verified Carbon Offset: {farm_total_co2:.2f} kg CO2e")
+            print(f"Total Transactions Logged: {len(farm_transactions)}")
+            print("Status: Pending institutional audit & verification.")
+
+        elif choice == "3":
+            print(f"\n[USSD] Thank you, {farmer['name']}. Session closed.")
+            break
+        else:
+            print("[USSD] Invalid choice. Please try again.")
+
+
+# --- PROGRAM ENTRY POINT ---
+if __name__ == "__main__":
+    verify_farm_id()
